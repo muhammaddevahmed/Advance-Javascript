@@ -1,5 +1,4 @@
-Key
-words: are a reserved words that cannot use as a variable name functions for example break,continue.
+Keywords: are a reserved words that cannot use as a variable name functions for example break,continue.
 
 variables:
   var:can be reinitialized and reassigned on global scope.
@@ -23,7 +22,13 @@ Array:
     Holds number of collection which holds on length of collection and indexes of collection.
 
 Object:
-     Collection of Properties where each data defined as a key value pair 
+     Collection of Properties where each data defined as a key value pair.
+
+function: 
+     is a block of code that is used to perform a specific task.
+     
+
+
 
      
 
