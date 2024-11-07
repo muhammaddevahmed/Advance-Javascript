@@ -15,18 +15,35 @@ for in (works on 2 dimensional arrays/object)
 Conditions to fullfill:
               1 (initialization) 2 (termination) 3 (iteration) 
 
-Composite Data Type/Premitive Data Type:
+Composite Data Type/Premitive Data Type/Referencing variables:
                Means in which we hold multiple data in single variable.  
 
 Array: 
     Holds number of collection which holds on length of collection and indexes of collection.
 
 Object:
-     Collection of Properties where each data defined as a key value pair.
+     Collection of Properties which have physical existence where each data defined as a key value pair.It has functuanality.
 
 function: 
-     is a block of code that is used to perform a specific task.
-     
+     is a block of code that is used to perform a specific task/executing in events/which is not assosciate with any class
+
+Types:
+    paramatise Function:
+            on exectution waiting for its calling a function.
+
+    Non-Paramatise Function:
+           waiting for events 
+
+Methods:
+    function which is associate with class is called methods
+      car{
+        drive();
+      }  
+
+DOM:
+   To target the html element in javascript and to manipulate the values / create the elements /attributes               
+
+
 
 
 
