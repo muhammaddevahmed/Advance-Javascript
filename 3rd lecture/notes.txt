@@ -1,0 +1,14 @@
+Class:
+   Classes are a blue print(Assumption).It takes no space in memory
+
+example:
+   Model of houses 
+
+Declaration/constructor:
+  default method of class/having all the data members
+      house = new Model();  
+      bus = new bus();  
+
+Member function/properties of the class/data member of class:
+    drive();
+    break();
