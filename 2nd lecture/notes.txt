@@ -2,7 +2,7 @@ Object Oriented Language:
     Real world entities
     Focusing reusibility 
 Based on:
-    Class/Object    
+    Class/Objectgit     
 
 Object:
      Having physical existence     

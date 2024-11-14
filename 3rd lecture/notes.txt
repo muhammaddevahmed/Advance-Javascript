@@ -12,3 +12,13 @@ Declaration/constructor:
 Member function/properties of the class/data member of class:
     drive();
     break();
+
+Types of constructor:
+   paramatise:
+   Non-Paramatise:
+
+new:
+   alocat the space in memory
+
+
+This: Target the parameters
