@@ -23,5 +23,14 @@ encapsulation:
     A data which can convert in a single unit. we can do a binding of data.
 
 polymorphism:
-    Poly means many morphism means functions . it contains method overloadinf and method overwriting    
+    Poly means many morphism means functions . it contains method overloadinf and method overriding    
+
+    method overloading(Compile time polymorphism):
+         function with same name but different parameters
+         example: add(int a, int b)
+
+    method overriding:
+         function with same name with same parameters         
+
+
 
