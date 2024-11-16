@@ -38,8 +38,9 @@ method:
 
 ecma script 6:
       keyword let,const
-      arrow function()
+      arrow function(=>)
       eventlistner
+
 
 
      
