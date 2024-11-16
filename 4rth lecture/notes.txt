@@ -36,5 +36,12 @@ polymorphism:
 method: 
      A function which associate with any class is called method             
 
+ecma script 6:
+      keyword let,const
+      arrow function()
+      eventlistner
+
+
+     
 
 
