@@ -1,0 +1,27 @@
+OOPS Pillars:
+      There are 4 pillars of OOPS
+       1 inheritance
+       2 abstraction
+       3 encapsulation
+       4 polymorphism
+
+inheritance:
+       Property transmission(Parent To Child)
+       
+Types of inheritence:
+    Single inheritence
+    Multi inheritence
+    multilevel inheritence
+    hybrid inheritence(combination of multilevel adn herachical inheritence)
+    herachical inheritance       
+
+abstraction:
+     data hiding/data limitations(by using access modifier (private,protected,public))
+
+
+encapsulation:
+    A data which can convert in a single unit. we can do a binding of data.
+
+polymorphism:
+    Poly means many morphism means functions . it contains method overloadinf and method overwriting    
+
