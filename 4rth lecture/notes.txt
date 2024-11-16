@@ -6,7 +6,8 @@ OOPS Pillars:
        4 polymorphism
 
 inheritance:
-       Property transmission(Parent To Child)
+       Property transmission(Parent To Child) we use extends keyword
+       super keyword is used to fiffrentiate between child and parent class
        
 Types of inheritence:
     Single inheritence
@@ -30,7 +31,10 @@ polymorphism:
          example: add(int a, int b)
 
     method overriding:
-         function with same name with same parameters         
+         function with same name with same parameters     
+
+method: 
+     A function which associate with any class is called method             
 
 
 
