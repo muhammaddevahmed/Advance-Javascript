@@ -25,4 +25,6 @@ console.log("sum of a and b is :" + ans[0]);
 console.log("Difference of a and b is :" + ans[1]);
 console.log("Product of a and b is :" + ans[2]);
 console.log("Division of a and b is :" + ans[3]);
-console.log("Reminder of a and b is :" + ans[4]);
+console.log("Reminder of a and b is :" + ans[4
+    
+]);

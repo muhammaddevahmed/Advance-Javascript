@@ -1,0 +1,20 @@
+Regular expressions:
+      Special types of patterns used to search maipulate and match strings.
+
+
+Why Use Regular Expressions?
+     To validate user input (e.g., email, phone number)
+     To parse or extract data from strings  
+     To find and replace specific patterns
+     To clean or format data      
+
+What is regular expressions:
+    it provides the methods, object literals , quantifiers     
+
+[a-z] shows what you want to do   
+{3,15} define range 
+
+quantifiers
+
+let regexName = /^[a-z]{3,10}$/;
+let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
