@@ -18,3 +18,9 @@ quantifiers
 
 let regexName = /^[a-z]{3,10}$/;
 let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+? (boolean) True/False
+* 0 to infinity
++ 1 to infinity
+a | b (or operator)
+. testing(concatenate)
