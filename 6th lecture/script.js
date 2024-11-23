@@ -1,6 +1,6 @@
 $(document).ready(function () {
     // Name validation
-    $("#name").on("keyup", function () {
+    $("#name").on("keyup", function() {
         let uname = $(this).val();
         let regexName = /^[a-z\s]{3,20}$/i; 
         if (!regexName.test(uname)) {
@@ -49,7 +49,7 @@ $(document).ready(function () {
     $("#password").on("keyup", function () {
         let uPassword = $(this).val();
         
-        let regexPassword= /^[A-Z]{1,}[a-z]{1,}[$?&@!_]{1}[\d]{1,}$/ ;
+        let regexPassword= /^[A-Z]{1,}[a-z]{1,}[$?&@!_]{1}[\d]{1,}$/;
         if (!regexPassword.test(uPassword)) {
             $(this).css("border", "2px solid red");
             $(this).next("small").html("Data should be valid").css({
