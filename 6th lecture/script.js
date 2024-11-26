@@ -12,11 +12,7 @@ $(document).ready(function () {
             });
         } else {
             $(this).css("border", "2px solid green");
-            $(this).next("small").html("Correct format").css({
-                "color": "green",
-                "font-weight": "bold",
-                "margin": "2px",
-            });
+            $(this).next("small").html("");
         }
     });
 
@@ -26,18 +22,14 @@ $(document).ready(function () {
         let regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         if (!regexEmail.test(uemail)) {
             $(this).css("border", "2px solid red");
-            $(this).next("small").html("Email contains").css({
+            $(this).next("small").html("Invalid email format").css({
                 "color": "red",
                 "font-weight": "bold",
                 "margin": "2px",
             });
         } else {
             $(this).css("border", "2px solid green");
-            $(this).next("small").html("Correct format").css({
-                "color": "green",
-                "font-weight": "bold",
-                "margin": "2px",
-            });
+            $(this).next("small").html("");
         }
     });
 
@@ -54,11 +46,7 @@ $(document).ready(function () {
             });
         } else {
             $(this).css("border", "2px solid green");
-            $(this).next("small").html("Valid password").css({
-                "color": "green",
-                "font-weight": "bold",
-                "margin": "2px",
-            });
+            $(this).next("small").html("");
         }
     });
 
@@ -75,71 +63,53 @@ $(document).ready(function () {
             });
         } else {
             $(this).css("border", "2px solid green");
-            $(this).next("small").html("Passwords match").css({
-                "color": "green",
-                "font-weight": "bold",
-                "margin": "2px",
-            });
+            $(this).next("small").html("");
         }
     });
 
-    // Check for empty inputs
-    function EmptyInput(id) {
-        if ($(id).val().trim() === "") {
-            $(id).css("border", "2px solid red");
-            $(id).next("small").html("This field is required").css({
-                "color": "red",
-                "font-weight": "bold",
-                "margin": "2px",
-            });
-            return false;
-        } else {
-            $(id).css("border", "2px solid green");
-            $(id).next("small").html(""); 
-            return true;
-        }
+    // Function to check if an input is valid
+    function isInputValid(id, regex) {
+        let value = $(id).val().trim();
+        return regex.test(value);
     }
 
-    
+    // Function to check if all validations are correct
+    function isFormValid() {
+        
+        let validName = isInputValid("#name", /^[\w\s]{3,20}$/i);
+        let validEmail = isInputValid("#email", /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/);
+        let validPassword = isInputValid("#password", /^(?=.*[A-Z])(?=.*[a-z])(?=.*[\d])(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8,12}$/);
+        let validConfirmPassword = $("#password").val() === $("#confirmPassword").val();
 
-   
+        
+        if (!validName) $("#name").css("border", "2px solid red");
+        if (!validEmail) $("#email").css("border", "2px solid red");
+        if (!validPassword) $("#password").css("border", "2px solid red");
+        if (!validConfirmPassword) $("#confirmPassword").css("border", "2px solid red");
+
+        
+        return validName && validEmail && validPassword && validConfirmPassword;
+    }
+
+
     $("#registeration").click(function (e) {
-        e.preventDefault(); 
-    
-        let validName = EmptyInput("#name");
-        let validEmail = EmptyInput("#email");
-        let validPassword = EmptyInput("#password");
-        let validConfirmPassword = EmptyInput("#confirmPassword");
-    
-        if (!validName || !validEmail || !validPassword || !validConfirmPassword) {
-            alert("Please fill in all required fields.");
-        } else {
+        e.preventDefault();
+
+        if (isFormValid()) {
             let userData = {
                 name: $("#name").val(),
                 email: $("#email").val(),
                 password: $("#password").val(),
             };
+
     
-            // Save user data in localStorage
             localStorage.setItem("userData", JSON.stringify(userData));
-    
-            
             alert("Account registered successfully. Data saved in local storage.");
-            window.location.replace('login.html'); 
+            window.location.replace("login.html");
+        } else {
+            alert("Please fill in all fields correctly.");
         }
     });
-
-
-    function loadUserData() {
-        let storedData = localStorage.getItem("userData");
-        if (storedData) {
-            let userData = JSON.parse(storedData);
-            console.log("Loaded User Data:", userData);
-        }
-    }
-
-    
-    loadUserData();
 });
 
 
