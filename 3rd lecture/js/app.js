@@ -21,3 +21,10 @@ class Student{
 
  let test = new Student("1553007","Muhammad Ahmed","9 to 11","CPISM")
  test.exam();
+
+
+
+ let date = document.querySelector("#date").innerHTML;  
+
+ 
+ 
